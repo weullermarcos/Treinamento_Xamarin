@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="App1.Views.ComponentsPage"
+             BackgroundColor="White">
+
+
+  <ScrollView>
+    <StackLayout Spacing="20">
+
+
+      <Label Text="Componentes" 
+             HorizontalTextAlignment="Center"
+             TextColor="Black"/>
+
+      <!--Componente ActivityIndicator-->
+      <Label Text="ActivityIndicator" 
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+      
+      <ActivityIndicator Color="Red" 
+                         IsRunning="True"
+                         HorizontalOptions="FillAndExpand"/>
+
+      <!--Componente BoxView-->
+      <Label Text="BoxView"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+      
+      <BoxView x:Name="bvwColor" 
+               Color="Blue" 
+               HorizontalOptions="FillAndExpand"/>
+
+      <!--Componente Button-->
+      <Label Text="Button"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+
+      <Button Text="Click-me"
+              TextColor="White"
+              BorderRadius="1"
+              BorderColor="Blue"
+              BackgroundColor="Blue"
+              HorizontalOptions="FillAndExpand"
+              Clicked="ChangeColor_Clicked"/>
+
+      <!--Componente DatePicker-->
+      <Label Text="DatePicker"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+    
+      <DatePicker HorizontalOptions="FillAndExpand" 
+                  Date="{x:Static sys:DateTime.Now}"
+                  TextColor="Black" 
+                  BackgroundColor="Gray">
+        
+         
+        <!--Formato da data-->
+        <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+        
+        <!--Dta minima-->
+        <DatePicker.MinimumDate>
+            <sys:DateTime x:FactoryMethod="Parse">
+               <x:Arguments>
+                  <x:String>Jan 1 2000</x:String>
+               </x:Arguments>
+            </sys:DateTime>
+           </DatePicker.MinimumDate>
+        
+        <!--Data máxima-->
+        <DatePicker.MaximumDate>
+            <sys:DateTime x:FactoryMethod="Parse">
+               <x:Arguments>
+                  <x:String>Dec 31 2050</x:String>
+               </x:Arguments>
+            </sys:DateTime>
+         </DatePicker.MaximumDate>
+      
+      </DatePicker>
+      
+    
+      <!--Editor-->
+      <Label Text="Editor"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+    
+      <!--é como uma caixa de texto com quebra de linhas-->
+      <Editor HorizontalOptions="FillAndExpand"
+              TextColor="Black" 
+              BackgroundColor="Gray"/>
+      
+      <!--Entry-->
+      <Label Text="Entry"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+      
+      <!--é como um campo de texto, sem quebra de linhas-->
+      <Entry HorizontalOptions="FillAndExpand"
+             TextColor="Black"
+             BackgroundColor="Gray"
+             Placeholder="PlaceHolder"/>
+      
+      <!--Image-->
+      <Label Text="Image"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+      
+      <!--Tem uma parada muito doida relacionado ao local da imagem-->
+      <!--se o source for setado no xaml as imagens tem que ser colocadas no caminho de acordo com esse link-->
+      <!--https://developer.xamarin.com/guides/xamarin-forms/working-with/images/-->
+      <Image x:Name ="imgXmarin"
+             Source="Xamarin.png"
+             HeightRequest="100"
+             WidthRequest="100"/>
+
+    
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

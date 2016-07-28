@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.StackLayoutPage"
+             BackgroundColor="White">
+
+  <!--Componente de Scroll-->
+  <ScrollView>
+
+    <!--Funciona como uma pilha de componentes-->
+    <StackLayout x:Name="layout"
+                 Spacing="30"
+                 Padding="10">
+
+      <Label Text="teste inicio" TextColor="Blue" />
+      <Label Text="teste" TextColor="Blue" />
+      <Label Text="teste" TextColor="Blue" />
+      <Label Text="teste" TextColor="Blue" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste meio" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste" />
+      <Label Text="teste fim" />
+      
+      <BoxView Color="Yellow"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+
+      <BoxView Color="Green"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+
+      <BoxView HeightRequest="75"
+               Color="Blue"
+               VerticalOptions="End"
+               HorizontalOptions="FillAndExpand" />
+
+    </StackLayout>
+    
+  </ScrollView>
+  
+</ContentPage>
