@@ -27,7 +27,7 @@ namespace App1.Views
 
         void ListView_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new ComponentsPage();
+            App.Current.MainPage = new ListViewPage();
         }
 
     }

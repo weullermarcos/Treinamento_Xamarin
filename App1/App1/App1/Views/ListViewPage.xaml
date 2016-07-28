@@ -3,12 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Views.ListViewPage"
              BackgroundColor="White">
-  
-  
-  <Label Text="ListView"
-         TextColor="Black"
-         VerticalOptions="FillAndExpand" 
-         HorizontalOptions="Center" />
-  
-  
+
+  <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="9*"/>     
+    </Grid.RowDefinitions>
+
+    <!--Label-->
+    <Label Grid.Row="0"
+           Text="Página de ListView"
+           TextColor="Black"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+
+    <ListView Grid.Row="1"  
+              x:Name="myListView"
+              VerticalOptions="FillAndExpand">
+      
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            
+            <StackLayout BackgroundColor="#EEE"
+                         Orientation="Horizontal">
+
+              <!--Cor-->
+              <BoxView Color="{Binding FavoriteColor}"/>
+                           
+              <StackLayout Orientation="Vertical">
+                <Label Text="{Binding Name}" TextColor="Black"/>
+                <Label Text="{Binding Birthday}" TextColor="Blue"/>
+              </StackLayout>
+              
+            </StackLayout>
+            
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    
+  </Grid>
+
 </ContentPage>
