@@ -23,6 +23,12 @@ namespace App1.Views
 
         }
 
+        void MySlider_ValueChanged(object sender, EventArgs e)
+        {   
+
+            txtSliderValue.Text = mySlider.Value.ToString();
+        }
+
         private async void LoadProgressBar()
         {
             myProgressBar.Progress = .1;

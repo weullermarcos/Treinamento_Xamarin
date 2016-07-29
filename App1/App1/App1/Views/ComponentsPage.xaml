@@ -9,7 +9,6 @@
   <ScrollView>
     <StackLayout Spacing="20">
 
-
       <Label Text="Componentes" 
              HorizontalTextAlignment="Center"
              TextColor="Black"/>
@@ -30,6 +29,33 @@
 
       <ProgressBar x:Name="myProgressBar" 
                    HorizontalOptions="FillAndExpand" />
+
+      <!--SearchBar -->
+      <Label Text="SearchBar"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+
+      <SearchBar Placeholder="Procurar"
+                 TextColor="Black"
+                 CancelButtonColor="Red"/>
+
+      <!--Slider -->
+      <Label Text="Slider"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+
+      <Slider x:Name="mySlider" 
+              HorizontalOptions="FillAndExpand" 
+              Minimum="0" 
+              Maximum="100" 
+              ValueChanged="MySlider_ValueChanged"/>
+
+      <!--Valor -->
+      <Label x:Name="txtSliderValue" 
+             Text="0"
+             HorizontalTextAlignment="Center"
+             TextColor="Red"/>
+      
       
       <!--Componente BoxView-->
       <Label Text="BoxView"
