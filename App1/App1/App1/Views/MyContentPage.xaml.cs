@@ -30,5 +30,9 @@ namespace App1.Views
             App.Current.MainPage = new ListViewPage();
         }
 
+        void Picker_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MyPickerPage();
+        }
     }
 }

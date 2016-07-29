@@ -8,7 +8,8 @@
 
     <Grid.RowDefinitions>
       <RowDefinition Height="1*"/>
-      <RowDefinition Height="9*"/>     
+      <RowDefinition Height="8*"/>
+      <RowDefinition Height="1*"/>
     </Grid.RowDefinitions>
 
     <!--Label-->
@@ -43,6 +44,13 @@
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
+
+    <!--Botão Voltar-->
+    <Button Grid.Row="2" 
+            Text="Voltar"
+            BackgroundColor="Gray"
+            HorizontalOptions="FillAndExpand"
+            Clicked="Voltar_Clicked"/>
     
   </Grid>
 

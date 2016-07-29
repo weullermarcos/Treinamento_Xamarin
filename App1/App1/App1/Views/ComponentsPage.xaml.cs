@@ -18,6 +18,7 @@ namespace App1.Views
             //imgXmarin.Source = Device.OnPlatform( iOS: ImageSource.FromFile("Images/Xamarin.png"),
             //                                  Android: ImageSource.FromFile("Xamarin.png"),
             //                                 WinPhone: ImageSource.FromFile("Assets/Xamarin.png"));
+
         }
 
         void ChangeColor_Clicked(object sender, EventArgs e)
@@ -30,6 +31,16 @@ namespace App1.Views
             {
                 bvwColor.Color = Color.Green;
             }
+        }
+
+        /// <summary>
+        /// Volta para a página Inicial
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void Voltar_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MyContentPage();
         }
     }
 }

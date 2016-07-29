@@ -114,6 +114,11 @@
              HeightRequest="100"
              WidthRequest="100"/>
 
+      <!--Botão Voltar-->
+      <Button Text="Voltar"
+              BackgroundColor="Gray"
+              HorizontalOptions="FillAndExpand"
+              Clicked="Voltar_Clicked"/>
     
     </StackLayout>
   </ScrollView>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.MyPickerPage"
+             BackgroundColor="White">
+
+  <Grid Padding="10,20">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="7*"/>
+      <RowDefinition Height="1*"/>
+    </Grid.RowDefinitions>
+
+    <!--Texto Picker-->
+    <Label Grid.Row="0"
+           Text="Picker" 
+           TextColor="Black" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+    <!--Elemento Picker-->
+    <Picker Grid.Row="1"
+            x:Name="myPicker"
+            HorizontalOptions="FillAndExpand"
+            TextColor="Black"
+            BackgroundColor="Gray"
+            SelectedIndexChanged="MyPicker_SelectedIndexChanged"/>
+
+    <!--Cor-->
+    <BoxView Grid.Row="2"
+             x:Name="myBoxView"
+             HorizontalOptions="FillAndExpand"
+             Color="Transparent"/>
+
+    <!--Botão Voltar-->
+    <Button Grid.Row="3"
+            Text="Voltar"
+            BackgroundColor="Gray"
+            HorizontalOptions="FillAndExpand"
+            Clicked="Voltar_Clicked"/>
+     
+  </Grid>
+</ContentPage>

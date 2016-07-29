@@ -50,5 +50,16 @@ namespace App1.Views
             myListView.ItemsSource = personList;
 
         }
+
+        /// <summary>
+        /// Volta para a página Inicial
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void Voltar_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MyContentPage();
+        }
+
     }
 }

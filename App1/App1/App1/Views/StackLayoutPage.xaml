@@ -46,6 +46,12 @@
                VerticalOptions="End"
                HorizontalOptions="FillAndExpand" />
 
+      <!--Botão Voltar-->
+      <Button Text="Voltar"
+              BackgroundColor="Gray"
+              HorizontalOptions="FillAndExpand"
+              Clicked="Voltar_Clicked"/>
+      
     </StackLayout>
     
   </ScrollView>
