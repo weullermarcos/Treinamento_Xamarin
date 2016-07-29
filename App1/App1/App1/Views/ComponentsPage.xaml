@@ -23,6 +23,14 @@
                          IsRunning="True"
                          HorizontalOptions="FillAndExpand"/>
 
+      <!--ProgressBar-->
+      <Label Text="ProgressBar"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+
+      <ProgressBar x:Name="myProgressBar" 
+                   HorizontalOptions="FillAndExpand" />
+      
       <!--Componente BoxView-->
       <Label Text="BoxView"
              HorizontalTextAlignment="Start"
@@ -113,7 +121,7 @@
              Source="Xamarin.png"
              HeightRequest="100"
              WidthRequest="100"/>
-
+      
       <!--Botão Voltar-->
       <Button Text="Voltar"
               BackgroundColor="Gray"

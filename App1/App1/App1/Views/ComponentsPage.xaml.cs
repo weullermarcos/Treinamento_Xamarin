@@ -19,6 +19,15 @@ namespace App1.Views
             //                                  Android: ImageSource.FromFile("Xamarin.png"),
             //                                 WinPhone: ImageSource.FromFile("Assets/Xamarin.png"));
 
+            LoadProgressBar();
+
+        }
+
+        private async void LoadProgressBar()
+        {
+            myProgressBar.Progress = .1;
+
+            await myProgressBar.ProgressTo(.9, 3000, Easing.Linear);
         }
 
         void ChangeColor_Clicked(object sender, EventArgs e)
