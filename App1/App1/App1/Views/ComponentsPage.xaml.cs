@@ -23,6 +23,11 @@ namespace App1.Views
 
         }
 
+        void MyStepper_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            txtStepperValue.Text = myStepper.Value.ToString();
+        }
+
         void MySlider_ValueChanged(object sender, EventArgs e)
         {   
 

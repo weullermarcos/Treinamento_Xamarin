@@ -5,7 +5,9 @@
              x:Class="App1.Views.ComponentsPage"
              BackgroundColor="White">
 
-
+  <!--Fonte-->
+  <!--https://developer.xamarin.com/guides/xamarin-forms/controls/views/-->
+  
   <ScrollView>
     <StackLayout Spacing="20">
 
@@ -50,12 +52,30 @@
               Maximum="100" 
               ValueChanged="MySlider_ValueChanged"/>
 
-      <!--Valor -->
+      <!--Valor Slider-->
       <Label x:Name="txtSliderValue" 
              Text="0"
              HorizontalTextAlignment="Center"
              TextColor="Red"/>
-      
+
+      <!--Stepper -->
+      <Label Text="Stepper"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+
+      <Stepper x:Name="myStepper" 
+               HorizontalOptions="CenterAndExpand"
+               BackgroundColor="Gray"
+               Minimum="0"
+               Maximum="100"
+               Increment="1"
+               ValueChanged="MyStepper_ValueChanged"/>
+
+      <!--Valor Stepper-->
+      <Label x:Name="txtStepperValue"
+             Text="0"
+             HorizontalTextAlignment="Center"
+             TextColor="Red"/>
       
       <!--Componente BoxView-->
       <Label Text="BoxView"
