@@ -139,8 +139,7 @@
          </DatePicker.MaximumDate>
       
       </DatePicker>
-      
-    
+          
       <!--Editor-->
       <Label Text="Editor"
              HorizontalTextAlignment="Start"
@@ -174,6 +173,16 @@
              Source="Xamarin.png"
              HeightRequest="100"
              WidthRequest="100"/>
+
+      <!--TimePicker -->
+      <Label Text="TimePicker"
+             HorizontalTextAlignment="Start"
+             TextColor="Red"/>
+
+      <TimePicker TextColor="Black"
+                  HorizontalOptions="FillAndExpand"
+                  BackgroundColor="Gray"/>
+      
       
       <!--Botão Voltar-->
       <Button Text="Voltar"
