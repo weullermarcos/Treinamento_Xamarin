@@ -11,6 +11,7 @@
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
     </Grid.RowDefinitions>
     
     <Button Grid.Row="0"
@@ -26,8 +27,12 @@
             Clicked="ListView_Clicked"/>
 
     <Button Grid.Row="3"
-        Text="Picker"
-        Clicked="Picker_Clicked"/>
+            Text="Picker"
+            Clicked="Picker_Clicked"/>
+
+    <Button Grid.Row="4"
+            Text="TableView"
+            Clicked="TableView_Clicked"/>
   
   </Grid>
   

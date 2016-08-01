@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.TableViewPage"
+             BackgroundColor="White">
+
+  <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="9*"/>
+      <RowDefinition Height="1*"/>
+    </Grid.RowDefinitions>
+
+    <TableView Grid.Row="0" 
+               Intent="Data" 
+               BackgroundColor="Transparent">
+      
+      <TableView.Root>
+        <TableRoot>
+
+          <TableSection Title="Seção 1">
+            <TextCell Text ="Campo 1" TextColor = "Black"/>
+            <TextCell Text ="Campo 2" TextColor = "Black"/>
+            <TextCell Text ="Campo 3" TextColor = "Black"/>
+          </TableSection>
+
+          <TableSection Title="Seção 2">
+            <TextCell Text ="Campo 1" TextColor = "Black"/>
+            <TextCell Text ="Campo 2" TextColor = "Black"/>
+
+            <!--Criando uma célula-->
+            <ViewCell>
+              <ViewCell.View>
+                <StackLayout Orientation="Horizontal" >
+
+                  <BoxView Color="Red"/>
+
+                  <StackLayout>
+                    <Label Text="Item 1" TextColor="Red"/>
+                    <Label Text="Item 2" TextColor="Red"/>
+                  </StackLayout>
+
+                  <BoxView x:Name="boxView"
+                           Color="Blue" />
+
+                </StackLayout>
+              </ViewCell.View>
+            </ViewCell>
+
+            <TextCell Text ="Campo 3" TextColor = "Black"/>
+
+          </TableSection>
+
+        </TableRoot>
+      </TableView.Root>
+      
+    </TableView>
+
+
+    <!--Botão Voltar-->
+    <Button Grid.Row="1"
+            Text="Voltar"
+            BackgroundColor="Gray"
+            HorizontalOptions="FillAndExpand"
+            Clicked="Voltar_Clicked"/>
+   
+    
+  </Grid>
+  
+</ContentPage>

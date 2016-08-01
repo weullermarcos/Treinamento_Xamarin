@@ -77,14 +77,12 @@
              HorizontalTextAlignment="Center"
              TextColor="Red"/>
 
-
       <!--Switch-->
       <Label Text="Switch"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
-      <Switch HorizontalOptions="Start"/>
-      
+      <Switch HorizontalOptions="Start"/>     
       
       <!--Componente BoxView-->
       <Label Text="BoxView"

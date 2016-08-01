@@ -34,5 +34,10 @@ namespace App1.Views
         {
             App.Current.MainPage = new MyPickerPage();
         }
+
+        void TableView_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new TableViewPage();
+        }
     }
 }
