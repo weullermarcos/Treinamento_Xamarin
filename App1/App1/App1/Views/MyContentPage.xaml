@@ -13,6 +13,7 @@
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
     </Grid.RowDefinitions>
     
     <Button Grid.Row="0"
@@ -21,7 +22,7 @@
 
     <Button Grid.Row="1"
             Text="Página de Componentes"
-            Clicked="MasterDetail_Clicked"/>
+            Clicked="Components_Clicked"/>
 
     <Button Grid.Row="2"
             Text="ListView"
@@ -39,6 +40,10 @@
             Text="WebView"
             Clicked="WebView_Clicked"/>
 
+    <Button Grid.Row="6"
+            Text="Master Detail"
+            Clicked="MasterDetail_Clicked"/>
+    
 
   </Grid>
   

@@ -20,7 +20,7 @@ namespace App1.Views
             App.Current.MainPage = new StackLayoutPage();
         }
 
-        void MasterDetail_Clicked(object sender, EventArgs e)
+        void Components_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new ComponentsPage();
         }
@@ -44,6 +44,10 @@ namespace App1.Views
         {
             App.Current.MainPage = new WebViewPage();
         }
-        
+
+        void MasterDetail_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MyMasterDetailPage();
+        }
     }
 }
