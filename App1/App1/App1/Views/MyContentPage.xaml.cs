@@ -39,5 +39,11 @@ namespace App1.Views
         {
             App.Current.MainPage = new TableViewPage();
         }
+
+        void WebView_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new WebViewPage();
+        }
+        
     }
 }

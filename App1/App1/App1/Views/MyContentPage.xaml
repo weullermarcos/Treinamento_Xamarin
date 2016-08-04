@@ -12,6 +12,7 @@
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
     </Grid.RowDefinitions>
     
     <Button Grid.Row="0"
@@ -33,7 +34,12 @@
     <Button Grid.Row="4"
             Text="TableView"
             Clicked="TableView_Clicked"/>
-  
+
+    <Button Grid.Row="5"
+            Text="WebView"
+            Clicked="WebView_Clicked"/>
+
+
   </Grid>
   
 </ContentPage>
