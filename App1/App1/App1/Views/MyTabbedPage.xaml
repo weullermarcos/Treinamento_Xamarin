@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1.Views;assembly=App1"
+             x:Class="App1.Views.MyTabbedPage"
+             BackgroundColor="White">
+
+  <TabbedPage.Children>
+
+    <!--Página 1-->
+    <local:DetailPage1 Title="Page 1" Icon="Page1.png"/>
+
+    <!--Página 2-->
+    <local:DetailPage2 Title="Page 2" Icon="Page2.png"/>
+    
+    <!--Página 3-->
+    <ContentPage Title="Page 3" Icon="Page3.png">
+
+      <!--Botão Voltar-->
+      <Button Grid.Row="2"
+              Text="Voltar"
+              BackgroundColor="Gray"
+              VerticalOptions="Center"
+              HorizontalOptions="FillAndExpand"
+              Clicked="Voltar_Clicked"/>
+      
+    </ContentPage>
+  </TabbedPage.Children>
+  
+</TabbedPage >

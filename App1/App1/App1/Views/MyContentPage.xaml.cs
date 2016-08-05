@@ -49,5 +49,10 @@ namespace App1.Views
         {
             App.Current.MainPage = new MyMasterDetailPage();
         }
+
+        void TabbedPage_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MyTabbedPage();
+        }
     }
 }

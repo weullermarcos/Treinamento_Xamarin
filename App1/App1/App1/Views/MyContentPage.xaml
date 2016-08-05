@@ -14,6 +14,7 @@
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
       <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
     </Grid.RowDefinitions>
     
     <Button Grid.Row="0"
@@ -43,8 +44,11 @@
     <Button Grid.Row="6"
             Text="Master Detail"
             Clicked="MasterDetail_Clicked"/>
-    
 
+    <Button Grid.Row="7"
+            Text="Tabbed Page"
+            Clicked="TabbedPage_Clicked"/>
+    
   </Grid>
   
 </ContentPage>
