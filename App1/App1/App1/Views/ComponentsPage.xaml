@@ -1,68 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
+  <!--Fonte do estudo:-->
+  <!--https://developer.xamarin.com/guides/xamarin-forms/controls/views/-->
+
+<!--Página de componentes do tipo ContentPage com Background Branco--> 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="App1.Views.ComponentsPage"
              BackgroundColor="White">
-
-  <!--Fonte-->
-  <!--https://developer.xamarin.com/guides/xamarin-forms/controls/views/-->
   
+  <!--Componente de Scroll: Possibilita a rolagem da tela
+      Os demais componentes da tela serão filhos deste-->
   <ScrollView>
+    
+      <!--Componente StackLayout: Utilizado para empilhar os componentes filhso deste, no exemplo utilizado está sendo se
+          tado um espaçamento de 20 entre cada componente-->
     <StackLayout Spacing="20">
 
+      <!--Componente de label com cor preta alinhado horizontalmente no centro-->
       <Label Text="Componentes" 
              HorizontalTextAlignment="Center"
              TextColor="Black"/>
 
-      <!--Componente ActivityIndicator-->
+      <!--Label: ActivityIndicator-->
       <Label Text="ActivityIndicator" 
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
       
+      <!--Componente ActivityIndicator com cor vermelha-->
       <ActivityIndicator Color="Red" 
                          IsRunning="True"
                          HorizontalOptions="FillAndExpand"/>
 
-      <!--ProgressBar-->
+      <!--Label: ProgressBar-->
       <Label Text="ProgressBar"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
+      <!--Componente ProgressBar. 
+          Verificar código no arquivo .cs para ver como o carregamento do componente é feito-->
       <ProgressBar x:Name="myProgressBar" 
                    HorizontalOptions="FillAndExpand" />
 
-      <!--SearchBar -->
+      <!--Label: SearchBar -->
       <Label Text="SearchBar"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
+      <!--Componente SearchBar (Barra de busca).
+          Cor do texto: Preta, 
+          Placeholder: "Procurar",
+          Botão de cancelar na cor vermelha-->
       <SearchBar Placeholder="Procurar"
                  TextColor="Black"
                  CancelButtonColor="Red"/>
 
-      <!--Slider -->
+      <!--Label: Slider -->
       <Label Text="Slider"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
+      <!--Componente Slider. 
+          Valor minimo 0, 
+          Valor máximo 100
+          Obs: Verificar aquivo .cs para ver como é controlada a mudança de valores no componente (MySlider_ValueChanged)-->
       <Slider x:Name="mySlider" 
               HorizontalOptions="FillAndExpand" 
               Minimum="0" 
               Maximum="100" 
               ValueChanged="MySlider_ValueChanged"/>
 
-      <!--Valor Slider-->
+      <!--Label para exibir valor selecionado no campo de Slider-->
       <Label x:Name="txtSliderValue" 
              Text="0"
              HorizontalTextAlignment="Center"
              TextColor="Red"/>
 
-      <!--Stepper -->
+      <!--Label: Stepper -->
       <Label Text="Stepper"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
+      <!--Componente Stepper (Contagem)
+          Valor minimo: 0, 
+          Valor máximo: 100,
+          Cor de Fundo: Cinza,
+          Valor incrementado em uma únidade--> 
       <Stepper x:Name="myStepper" 
                HorizontalOptions="CenterAndExpand"
                BackgroundColor="Gray"
@@ -71,33 +95,42 @@
                Increment="1"
                ValueChanged="MyStepper_ValueChanged"/>
 
-      <!--Valor Stepper-->
+      <!--Label para exibir valor selecionado no campo de Stepper-->
       <Label x:Name="txtStepperValue"
              Text="0"
              HorizontalTextAlignment="Center"
              TextColor="Red"/>
 
-      <!--Switch-->
+      <!--Label: Switch-->
       <Label Text="Switch"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
+      <!--Componente Switch (Botão de seleção On/Off)-->
       <Switch HorizontalOptions="Start"/>     
       
-      <!--Componente BoxView-->
+      <!--Label: BoxView-->
       <Label Text="BoxView"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
       
+      <!--Label: BoxView (Retângulo)
+          Cor: Azul-->
       <BoxView x:Name="bvwColor" 
                Color="Blue" 
                HorizontalOptions="FillAndExpand"/>
 
-      <!--Componente Button-->
+      <!--Label: Button-->
       <Label Text="Button"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
+      <!--Componente: Button (Botão)
+          Cor do Texto: Branco,
+          Espessura da Borda com 1 pixel,
+          Cor de Fundo: Azul,
+          Obs: ao clicar no botão o componente boxview alterará a sua cor,
+          verificar no arquivo .cs como o comportamento foi implementado (ChangeColor_Clicked)-->
       <Button Text="Click-me"
               TextColor="White"
               BorderRadius="1"
@@ -106,83 +139,68 @@
               HorizontalOptions="FillAndExpand"
               Clicked="ChangeColor_Clicked"/>
 
-      <!--Componente DatePicker-->
+      <!--Label: DatePicker-->
       <Label Text="DatePicker"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
     
+      <!--Componente DatePicker (Campo de seleção de data).
+          Cor do Texto: preto, 
+          Cor de Fundo: cinza, 
+          Data inicial: Data atual,
+          Formato da Data: dd-MM-yyyy, 
+          Data Minima: Jan 1 2000 
+          Data Máxima: Dec 31 2050-->
       <DatePicker HorizontalOptions="FillAndExpand" 
                   Date="{x:Static sys:DateTime.Now}"
                   TextColor="Black" 
-                  BackgroundColor="Gray">
-        
-         
-        <!--Formato da data-->
-        <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
-        
-        <!--Dta minima-->
-        <DatePicker.MinimumDate>
-            <sys:DateTime x:FactoryMethod="Parse">
-               <x:Arguments>
-                  <x:String>Jan 1 2000</x:String>
-               </x:Arguments>
-            </sys:DateTime>
-           </DatePicker.MinimumDate>
-        
-        <!--Data máxima-->
-        <DatePicker.MaximumDate>
-            <sys:DateTime x:FactoryMethod="Parse">
-               <x:Arguments>
-                  <x:String>Dec 31 2050</x:String>
-               </x:Arguments>
-            </sys:DateTime>
-         </DatePicker.MaximumDate>
-      
-      </DatePicker>
+                  BackgroundColor="Gray"
+                  DatePicker.Format="dd-MM-yyyy"
+                  MinimumDate="Jan 1 2000"
+                  MaximumDate="Dec 31 2050"/>
           
-      <!--Editor-->
+      <!--Label: Editor-->
       <Label Text="Editor"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
     
-      <!--é como uma caixa de texto com quebra de linhas-->
+      <!--Componente Editor (é como uma caixa de texto com quebra de linhas)-->
       <Editor HorizontalOptions="FillAndExpand"
               TextColor="Black" 
               BackgroundColor="Gray"/>
       
-      <!--Entry-->
+      <!--Label: Entry-->
       <Label Text="Entry"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
       
-      <!--é como um campo de texto, sem quebra de linhas-->
+      <!--Componente Entry (É como um campo de texto, sem quebra de linhas)-->
       <Entry HorizontalOptions="FillAndExpand"
              TextColor="Black"
              BackgroundColor="Gray"
              Placeholder="PlaceHolder"/>
       
-      <!--Image-->
+      <!--Label: Image-->
       <Label Text="Image"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
       
-      <!--Tem uma parada muito doida relacionado ao local da imagem-->
-      <!--se o source for setado no xaml as imagens tem que ser colocadas no caminho de acordo com esse link-->
+      <!--Se o source for setado no xaml as imagens tem que ser colocadas no caminho de acordo com esse link-->
       <!--https://developer.xamarin.com/guides/xamarin-forms/working-with/images/-->
       <Image x:Name ="imgXmarin"
              Source="Xamarin.png"
              HeightRequest="100"
              WidthRequest="100"/>
 
-      <!--TimePicker -->
+      <!--Label: TimePicker -->
       <Label Text="TimePicker"
              HorizontalTextAlignment="Start"
              TextColor="Red"/>
 
+      <!--Compnente TimePicker (hora)-->
       <TimePicker TextColor="Black"
                   HorizontalOptions="FillAndExpand"
                   BackgroundColor="Gray"/>
-      
       
       <!--Botão Voltar-->
       <Button Text="Voltar"
